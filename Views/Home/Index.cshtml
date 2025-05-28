@@ -1,0 +1,676 @@
+﻿﻿
+@{
+     ViewBag.Title = "Index";
+     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<eUseControl.Domain.Entities.User.Recenzie>
+
+<div class="hero-wrap js-fullheight" style="background-image: url('@Url.Content("~/Content/images/background1.jpg")')">
+
+     <div class="overlay"></div>
+     <div class="container">
+          <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+               <div class="col-md-11 ftco-animate text-left">
+
+                    <h1 class="mb-3">
+                         Iubirea are un năsuc umed și o codiță fericită!
+
+
+                         <p><a href="#" class="btn btn-warning mr-md-4 py-3 px-4">Adoptă acum! <span class="ion-ios-arrow-forward"></span></a></p>
+
+
+               </div>
+          </div>
+     </div>
+</div>
+
+
+<section class="ftco-section bg-light ftco-no-pt ftco-intro">
+     <div class="container">
+          <div class="row">
+               <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+                    <div class="d-block services text-center">
+                         <div class="icon d-flex align-items-center justify-content-center">
+                              <span class="flaticon-blind"></span>
+                         </div>
+                         <div class="media-body">
+                              <h3 class="heading">Adoptă un animăluț!</h3>
+                              <p>Deschide-ți inima și casa pentru un animal care are nevoie de tine. Fiecare animal merită dragoste, îngrijire și un loc sigur pe care să-l numească acasă.</p>
+                              <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="fa fa-chevron-right"></span><i class="sr-only">Read more</i></a>
+                         </div>
+                    </div>
+               </div>
+               <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+                    <div class="d-block services text-center">
+                         <div class="icon d-flex align-items-center justify-content-center">
+                              <span class="flaticon-dog-eating"></span>
+                         </div>
+                         <div class="media-body">
+                              <h3 class="heading">Donează!</h3>
+                              <p>Donațiile tale finanțează direct îngrijirea veterinară, hrana și adăpostul animalelor aflate în nevoie. Fiecare contribuție CONTEAZĂ!  </p>
+                              <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="fa fa-chevron-right"></span><i class="sr-only">Read more</i></a>
+                         </div>
+                    </div>
+               </div>
+               <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+                    <div class="d-block services text-center">
+                         <div class="icon d-flex align-items-center justify-content-center">
+                              <span class="flaticon-grooming"></span>
+                         </div>
+                         <div class="media-body">
+                              <h3 class="heading">Devino voluntar!</h3>
+                              <p>Oferă-ți timpul pentru a face o schimbare semnificativă. Prin implicarea ta ca voluntar, vei contribui direct la îngrijirea și sprijinul animalelor aflate în nevoie.</p>
+                              <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="fa fa-chevron-right"></span><i class="sr-only">Read more</i></a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</section>
+
+<section class="ftco-section ftco-no-pt ftco-no-pb">
+     <div class="container">
+          <div class="row d-flex no-gutters">
+               <div class="col-md-5 d-flex">
+                    <div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0" style="background-image: url('@Url.Content("~/Content/images/1.jpg")')">
+                    </div>
+               </div>
+               <div class="col-md-7 pl-md-5 py-md-5">
+                    <div class="heading-section pt-md-5">
+                         <h2 class="mb-4">De ce ne pasă de animale?</h2>
+                    </div>
+                    <div class="row">
+                         <div class="col-md-6 services-2 w-100 d-flex">
+                              <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-stethoscope"></span></div>
+                              <div class="text pl-3">
+                                   <h4>Legături de suflet</h4>
+                                   <p>Dragostea noastră pentru animale este forța care ne motivează în tot ceea ce facem.</p>
+                              </div>
+                         </div>
+                         <div class="col-md-6 services-2 w-100 d-flex">
+                              <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-customer-service"></span></div>
+                              <div class="text pl-3">
+                                   <h4>Dedicare pentru bunătate</h4>
+                                   <p> Ne ghidăm fiecare acțiune după compasiune, oferind fiecărui animal șansa la o viață mai bună.</p>
+                              </div>
+                         </div>
+                         <div class="col-md-6 services-2 w-100 d-flex">
+                              <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-emergency-call"></span></div>
+                              <div class="text pl-3">
+                                   <h4>Grijă pentru sănătate</h4>
+                                   <p>Asigurăm îngrijire medicală, hrană și un mediu sigur pentru bunăstarea fiecărui animal.</p>
+                              </div>
+                         </div>
+                         <div class="col-md-6 services-2 w-100 d-flex">
+                              <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-veterinarian"></span></div>
+                              <div class="text pl-3">
+                                   <h4>Educație și conștientizare</h4>
+                                   <p>Promovăm responsabilitatea față de animale prin informare și sprijinirea adopțiilor responsabile.</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</section>
+
+<section class="ftco-counter" id="section-counter">
+     <div class="container">
+          <div class="row">
+               <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18 text-center">
+                         <div class="text">
+                              <strong class="number" data-number="60">0</strong>
+                         </div>
+                         <div class="text">
+                              <span>Voluntari</span>
+                         </div>
+                    </div>
+               </div>
+               <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18 text-center">
+                         <div class="text">
+                              <strong class="number" data-number="12008">0</strong>
+                         </div>
+                         <div class="text">
+                              <span>Donații primite</span>
+                         </div>
+                    </div>
+               </div>
+               <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18 text-center">
+                         <div class="text">
+                              <strong class="number" data-number="520">0</strong>
+                         </div>
+                         <div class="text">
+                              <span>Adopții cu succes</span>
+                         </div>
+                    </div>
+               </div>
+               <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18 text-center">
+                         <div class="text">
+                              <strong class="number" data-number="500">0</strong>
+                         </div>
+                         <div class="text">
+                              <span>Consultații veterinare</span>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</section>
+
+<section class="ftco-section bg-light ftco-faqs">
+     <div class="container">
+          <div class="row">
+               <div class="col-lg-6 order-md-last">
+                    <div class="img align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0" style="background-image: url('@Url.Content("~/Content/images/q1.jpg")')">
+
+                    </div>
+                    <div class="d-flex mt-3">
+                         <div class="img img-2 mr-md-2" style="background-image: url('@Url.Content("~/Content/images/gallery-5.jpg")')"></div>
+                         <div class="img img-2 ml-md-2" style="background-image: url('@Url.Content("~/Content/images/gallery-3.jpg")')"></div>
+                    </div>
+               </div>
+
+               <div class="col-lg-6">
+                    <div class="heading-section mb-5 mt-5 mt-lg-0">
+                         <h2 class="mb-3">Întrebări adresate frecvent</h2>
+                         <p>Dacă nu ai găsit răspunsul la întrebarea ta, nu ezita să ne contactezi! Suntem aici să te ajutăm. </p>
+                    </div>
+                    <div id="accordion" class="myaccordion w-100" aria-multiselectable="true">
+                         <div class="card">
+                              <div class="card-header p-0" id="headingOne">
+                                   <h2 class="mb-0">
+                                        <button href="#collapseOne" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+                                             <p class="mb-0">Cum pot adopta un animal?</p>
+                                             <i class="fa" aria-hidden="true"></i>
+                                        </button>
+                                   </h2>
+                              </div>
+                              <div class="collapse show" id="collapseOne" role="tabpanel" aria-labelledby="headingOne">
+                                   <div class="card-body py-3 px-0">
+                                        <ol>
+                                             <p>Pentru a adopta un animal, trebuie să completezi un formular de adopție pe site-ul nostru sau la adăpost. Apoi, vei fi contactat pentru o discuție și o vizită pentru a ne asigura că animalul se potrivește stilului tău de viață. Dacă totul este în regulă, vei semna un contract de adopție și vei primi toate informațiile necesare despre îngrijirea lui. În final, îți vei putea lua noul prieten acasă și vei beneficia de suport din partea noastră pentru o tranziție ușoară</p>
+
+                                        </ol>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="card">
+                              <div class="card-header p-0" id="headingTwo" role="tab">
+                                   <h2 class="mb-0">
+                                        <button href="#collapseTwo" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+                                             <p class="mb-0">Ce documente sunt necesare pentru adopție?</p>
+                                             <i class="fa" aria-hidden="true"></i>
+                                        </button>
+                                   </h2>
+                              </div>
+                              <div class="collapse" id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo">
+                                   <div class="card-body py-3 px-0">
+                                        <ol>
+                                             <p>
+                                                  Pentru a adopta un animal, vei avea nevoie de următoarele documente:
+                                             </p>
+                                             <li>Act de identitate – pentru a confirma vârsta și domiciliul adoptatorului.</li>
+                                             <li>Dovadă de reședință – un document care atestă că ai un spațiu adecvat pentru animal.</li>
+                                             <li>Acordul proprietarului locuinței (dacă stai în chirie) – pentru a evita probleme ulterioare.</li>
+                                             <li> Formular de adopție completat – cu informații despre stilul tău de viață și experiența cu animalele.</li>
+                                        </ol>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="card">
+                              <div class="card-header p-0" id="headingThree" role="tab">
+                                   <h2 class="mb-0">
+                                        <button href="#collapseThree" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+                                             <p class="mb-0">Cum pot face o donație pentru animale?</p>
+                                             <i class="fa" aria-hidden="true"></i>
+                                        </button>
+                                   </h2>
+                              </div>
+                              <div class="collapse" id="collapseThree" role="tabpanel" aria-labelledby="headingTwo">
+                                   <div class="card-body py-3 px-0">
+                                        <ol>
+                                             <p>
+                                                  Poți face o donație pentru animale în următoarele moduri:
+                                             </p>
+                                             <li> Online – Accesează site-ul nostru și donează prin card bancar, PayPal sau transfer bancar.</li>
+                                             <li> Prin transfer bancar – Folosește contul nostru IBAN pentru a face o donație directă.</li>
+                                             <li>Donare de bunuri – Poți oferi hrană, pături, jucării sau alte produse necesare adăpostului.</li>
+                                             <p>Fiecare contribuție, indiferent de mărime, face o diferență! ❤️</p>
+                                        </ol>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="card">
+                              <div class="card-header p-0" id="headingFour" role="tab">
+                                   <h2 class="mb-0">
+                                        <button href="#collapseFour" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseFour">
+                                             <p class="mb-0">Ce se întâmplă dacă nu mă mai pot ocupa de animalul adoptat?</p>
+                                             <i class="fa" aria-hidden="true"></i>
+                                        </button>
+                                   </h2>
+                              </div>
+                              <div class="collapse" id="collapseFour" role="tabpanel" aria-labelledby="headingTwo">
+                                   <div class="card-body py-3 px-0">
+                                        <p>
+                                             Dacă nu te mai poți ocupa de animalul adoptat, iată ce trebuie să faci:
+                                        </p>
+
+                                        <li> Contactează adăpostul – Anunță organizația de unde ai adoptat pentru a găsi cea mai bună soluție. </li>
+                                        <li>Găsește un nou cămin – Dacă ai o persoană de încredere care poate avea grijă de el, discută despre posibilitatea re-adoptării. </li>
+                                        <li> Nu îl abandona – Este important să te asiguri că animalul ajunge într-un mediu sigur și iubitor. </li>
+                                        <p>
+                                             Responsabilitatea față de un animal continuă chiar și atunci când circumstanțele se schimbă! ❤️
+                                        </p>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</section>
+
+
+<section class="ftco-section testimony-section" style="background-image: url('@Url.Content("~/Content/images/bgyellow.jpg")'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+     <div class="overlay"></div>
+     <div class="container">
+          <div class="row justify-content-center pb-5 mb-3">
+               <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h2>Clienți fericiți și Recenzii</h2>
+               </div>
+          </div>
+          <div class="row ftco-animate">
+               <div class="col-md-12">
+                    <div class="carousel-testimony owl-carousel ftco-owl">
+
+                         @* Recenzii statice *@
+                         <div class="item">
+                              <div class="testimony-wrap py-4">
+                                   <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                                   <div class="text">
+                                        <p class="mb-4">O experiență extraordinară! Am găsit aici un cățel minunat, iar echipa adăpostului ne-a oferit tot sprijinul necesar pentru a ne asigura că se adaptează bine în noul său cămin.</p>
+                                        <div class="d-flex align-items-center">
+                                             <div class="user-img" style="background-image: url('@Url.Content("~/Content/images/EmmaJohnson.jpg")')"></div>
+                                             <div class="pl-3">
+                                                  <p class="name">Emma Johnson</p>
+
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="item">
+                              <div class="testimony-wrap py-4">
+                                   <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                                   <div class="text">
+                                        <p class="mb-4">Experiența mea cu acest adăpost a fost minunată! Procesul de adopție a fost clar și bine organizat, iar echipa a fost extrem de amabilă și dedicată. Acum am un prieten blănos care îmi umple viața de bucurie!</p>
+                                        <div class="d-flex align-items-center">
+                                             <div class="user-img" style="background-image: url('@Url.Content("~/Content/images/RogerScott.jpg")')"></div>
+                                             <div class="pl-3">
+                                                  <p class="name">Roger Scott</p>
+
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="item">
+                              <div class="testimony-wrap py-4">
+                                   <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                                   <div class="text">
+                                        <p class="mb-4">Mă bucur că am putut adopta un animal de aici! Toate animalele sunt bine îngrijite, iar personalul se asigură că fiecare își găsește un cămin potrivit. Recomand acest adăpost tuturor celor care vor să ofere iubire unui suflet necăjit!</p>
+                                        <div class="d-flex align-items-center">
+                                             <div class="user-img" style="background-image: url('@Url.Content("~/Content/images/DavidSmith.jpg")')"></div>
+                                             <div class="pl-3">
+                                                  <p class="name">David Smith</p>
+
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="item">
+                              <div class="testimony-wrap py-4">
+                                   <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                                   <div class="text">
+                                        <p class="mb-4">Un loc minunat, unde animalele sunt tratate cu grijă și afecțiune! Am fost ghidat pas cu pas în procesul de adopție și am primit toate informațiile necesare. Mulțumesc echipei pentru dedicare și sprijin!</p>
+                                        <div class="d-flex align-items-center">
+                                             <div class="user-img" style="background-image: url('@Url.Content("~/Content/images/SophiaLee.jpg")')"></div>
+                                             <div class="pl-3">
+                                                  <p class="name">Sophia Lee</p>
+
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="item">
+                              <div class="testimony-wrap py-4">
+                                   <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                                   <div class="text">
+                                        <p class="mb-4">Dacă vreți să salvați o viață și să primiți iubire necondiționată, acesta este locul perfect! Mulțumesc echipei pentru tot efortul depus!.</p>
+                                        <div class="d-flex align-items-center">
+                                             <div class="user-img" style="background-image: url('@Url.Content("~/Content/images/KatieBrown.jpg")')"></div>
+                                             <div class="pl-3">
+                                                  <p class="name">Katie Brown</p>
+
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+                         @* Recenzii dinamice *@
+                         @foreach (var recenzie in Model)
+                         {
+                              <div class="item">
+                                   <div class="testimony-wrap py-4">
+                                        <a href="@Url.Action("EditRecenzie", "Recenzii", new { id = recenzie.Id })" style="text-decoration: none; color: inherit;">
+                                             <div class="icon d-flex align-items-center justify-content-center">
+                                                  <span class="fa fa-quote-left"></span>
+                                             </div>
+                                             <div class="text">
+                                                  <p>@recenzie.Text</p>
+                                                  <p><strong>@recenzie.Autor</strong></p>
+                                                  <p>@recenzie.Data.ToString("dd.MM.yyyy")</p>
+                                             </div>
+                                        </a>
+                                   </div>
+                              </div>
+                         }
+
+                    </div>
+               </div>
+          </div>
+
+          @* Buton Adaugă Recenzie *@
+          @if (Session["UserRole"] != null && (Session["UserRole"].ToString() == "User" || Session["UserRole"].ToString() == "Donator"))
+          {
+               <div class="text-center mt-4">
+                    <a href="@Url.Action("AdaugaRecenzie", "Recenzii")" class="btn btn-primary">Adaugă recenzie</a>
+               </div>
+          }
+     </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="ftco-section">
+     <div class="container">
+          <div class="row justify-content-center pb-5 mb-3">
+               <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h2>Sfaturi</h2>
+               </div>
+          </div>
+          <div class="row">
+               <div class="col-md-4 ftco-animate">
+                    <div class="block-7">
+                         <div class="img" style="background-image: url('@Url.Content("~/Content/images/pricing-1.jpg")')"></div>
+                         <div class="text-center p-4">
+                              <span class="excerpt d-block">Sfaturi de îngrijire a animalelor:</span>
+
+
+                              <ul class="pricing-text mb-5">
+                                   <li><span class="fa fa-check mr-2"></span>O hrană adecvată vârstei și tipului de animal este esențială pentru sănătatea acestuia. Consultă un veterinar pentru recomandări și respectă dozajele corespunzătoare pentru a evita obezitatea și problemele de sănătate.</li>
+                                   <li><span class="fa fa-check mr-2"></span>Exercițiile regulate, cum ar fi plimbările zilnice pentru câini și jocurile interactive pentru pisici, sunt importante pentru menținerea sănătății fizice și mentale a animalului tău.</li>
+                                   <li><span class="fa fa-check mr-2"></span>Chiar dacă animalul tău pare sănătos, este important să faci controale periodice pentru a preveni apariția unor afecțiuni și pentru a te asigura că primește toate vaccinurile și tratamentele necesare.</li>
+
+                              </ul>
+
+                         </div>
+                    </div>
+               </div>
+               <div class="col-md-4 ftco-animate">
+                    <div class="block-7">
+                         <div class="img" style="background-image: url('@Url.Content("~/Content/images/pricing-2.jpg")');"></div>
+                         <div class="text-center p-4">
+                              <span class="excerpt d-block">Sfaturi pentru acomodarea animalului la un nou mediu:</span>
+
+
+                              <ul class="pricing-text mb-5">
+                                   <li><span class="fa fa-check mr-2"></span>Asigură-te că animalul are un loc liniștit și confortabil unde să se retragă și să se simtă în siguranță. Poate fi un pat, o cușcă sau un colț din casă, unde nu va fi deranjat de zgomote sau de alte animale.</li>
+                                   <li><span class="fa fa-check mr-2"></span>Nu forța animalul să se adapteze prea repede. Permite-i să exploreze noul mediu în ritmul lui, oferindu-i timp să se familiarizeze cu noile mirosuri, sunete și obiecte.</li>
+                                   <li><span class="fa fa-check mr-2"></span>Păstrează rutina de hrană, plimbări și jocuri cât mai consistentă posibil. Acest lucru îi va oferi un sentiment de siguranță și va contribui la reducerea stresului în perioada de adaptare.</li>
+                              </ul>
+
+                         </div>
+                    </div>
+               </div>
+               <div class="col-md-4 ftco-animate">
+                    <div class="block-7">
+                         <div class="img" style="background-image: url('@Url.Content("~/Content/images/pricing-3.jpg")');"></div>
+                         <div class="text-center p-4">
+                              <span class="excerpt d-block">Sfaturi suplimentare:</span>
+
+
+                              <ul class="pricing-text mb-5">
+                                   <li><span class="fa fa-check mr-2"></span>Este important ca animalul să fie expus treptat la alte animale sau oameni pentru a învăța cum să interacționeze corect cu aceștia. Începe cu întâlniri scurte și supraveghează comportamentul lor, recompensând comportamentele pozitive.</li>
+                                   <li><span class="fa fa-check mr-2"></span>Baie regulată, perierea blănii și igiena dentară sunt esențiale pentru sănătatea animalului. În funcție de specie, asigură-te că igiena animalului este menținută la un nivel optim pentru a preveni apariția infecțiilor.</li>
+                                   <li><span class="fa fa-check mr-2"></span>Educația animalului este esențială pentru a-i stabili reguli clare. Fii consecvent în disciplină și recompensează comportamentele dorite, ajutându-l să înțeleagă ce este permis și ce nu.</li>
+
+                              </ul>
+
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     </>
+     <section class="ftco-section">
+          <div class="container">
+               <div class="row justify-content-center pb-5 mb-3">
+                    <div class="col-md-7 heading-section text-center ftco-animate">
+                         <h2>Galeria de animale</h2>
+                    </div>
+               </div>
+
+               <div class="row">
+                    <div class="col-md-4 ftco-animate">
+                         <div class="work mb-4 img d-flex align-items-end" style="background-image: url('@Url.Content("~/Content/images/gallery-1.jpg")')">
+                              <a href="images/gallery-1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                                   <span class="fa fa-expand"></span>
+                              </a>
+                              <div class="desc w-100 px-4">
+                                   <div class="text w-100 mb-3">
+
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 ftco-animate">
+                         <div class="work mb-4 img d-flex align-items-end" style="background-image: url('@Url.Content("~/Content/images/gallery-2.jpg")')">
+                              <a href="images/gallery-2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                                   <span class="fa fa-expand"></span>
+                              </a>
+                              <div class="desc w-100 px-4">
+                                   <div class="text w-100 mb-3">
+
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 ftco-animate">
+                         <div class="work mb-4 img d-flex align-items-end" style="background-image: url('@Url.Content("~/Content/images/gallery-8.jpg")')">
+                              <a href="images/gallery-2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                                   <span class="fa fa-expand"></span>
+                              </a>
+                              <div class="desc w-100 px-4">
+                                   <div class="text w-100 mb-3">
+
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 ftco-animate">
+                         <div class="work mb-4 img d-flex align-items-end" style="background-image: url('@Url.Content("~/Content/images/gallery-9.jpg")')">
+                              <a href="images/gallery-2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                                   <span class="fa fa-expand"></span>
+                              </a>
+                              <div class="desc w-100 px-4">
+                                   <div class="text w-100 mb-3">
+
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 ftco-animate">
+                         <div class="work mb-4 img d-flex align-items-end" style="background-image: url('@Url.Content("~/Content/images/gallery-7.jpg")')">
+                              <a href="images/gallery-2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                                   <span class="fa fa-expand"></span>
+                              </a>
+                              <div class="desc w-100 px-4">
+                                   <div class="text w-100 mb-3">
+
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 ftco-animate">
+                         <div class="work mb-4 img d-flex align-items-end" style="background-image: url('@Url.Content("~/Content/images/gallery-3.jpg")')">
+                              <a href="images/gallery-3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                                   <span class="fa fa-expand"></span>
+                              </a>
+                              <div class="desc w-100 px-4">
+                                   <div class="text w-100 mb-3">
+
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 ftco-animate">
+                         <div class="work mb-4 img d-flex align-items-end" style="background-image: url('@Url.Content("~/Content/images/gallery-4.jpg")')">
+                              <a href="images/gallery-4.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                                   <span class="fa fa-expand"></span>
+                              </a>
+                              <div class="desc w-100 px-4">
+                                   <div class="text w-100 mb-3">
+
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 ftco-animate">
+                         <div class="work mb-4 img d-flex align-items-end" style="background-image: url('@Url.Content("~/Content/images/gallery-5.jpg")')">
+                              <a href="images/gallery-5.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                                   <span class="fa fa-expand"></span>
+                              </a>
+                              <div class="desc w-100 px-4">
+                                   <div class="text w-100 mb-3">
+
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 ftco-animate">
+                         <div class="work mb-4 img d-flex align-items-end" style="background-image: url('@Url.Content("~/Content/images/gallery-6.jpg")');">
+                              <a href="images/gallery-6.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                                   <span class="fa fa-expand"></span>
+                              </a>
+                              <div class="desc w-100 px-4">
+                                   <div class="text w-100 mb-3">
+
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+     <section class="ftco-section bg-light">
+
+          <section class="ftco-section">
+               <div class="container">
+                    <div class="row justify-content-center pb-5 mb-3">
+                         <div class="col-md-7 heading-section text-center ftco-animate">
+                              <h2>Ultimile noutăți din blogul nostru</h2>
+                         </div>
+                    </div>
+               </div>
+               <div class="row d-flex">
+                    <div class="col-md-4 d-flex ftco-animate">
+                         <div class="blog-entry align-self-stretch">
+                              <a href="blog-single.html" class="block-20 rounded" style="background-image: url('@Url.Content("~/Content/images/image_1.jpg")')">
+                              </a>
+                              <div class="text p-4">
+                                   <div class="meta mb-2">
+                                        <div><a href="#">Aprilie 29, 2024</a></div>
+                                        <div><a href="#">Admin</a></div>
+                                        <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                                   </div>
+                                   <h3 class="heading"><a href="#">După mult timp în adăpost, micuțul nostru a fost adoptat de o familie minunată. Suntem extrem de fericiți pentru el și mulțumim tuturor celor care au sprijinit acest proces și au oferit o șansă câinilor noștri.</a></h3>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 d-flex ftco-animate">
+                         <div class="blog-entry align-self-stretch">
+                              <a href="blog-single.html" class="block-20 rounded" style="background-image: url('@Url.Content("~/Content/images/image_2.jpg")')">
+                              </a>
+                              <div class="text p-4">
+                                   <div class="meta mb-2">
+                                        <div><a href="#">Septembrie 07, 2024</a></div>
+                                        <div><a href="#">Admin</a></div>
+                                        <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                                   </div>
+                                   <h3 class="heading"><a href="#">Pentru prima dată, Rocky a vizitat salonul de grooming și a avut parte de o experiență minunată! A fost un moment de răsfăț și îngrijire, iar acum micuțul nostru arată mai fericit ca niciodată. </a></h3>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 d-flex ftco-animate">
+                         <div class="blog-entry align-self-stretch">
+                              <a href="blog-single.html" class="block-20 rounded" style="background-image: url('@Url.Content("~/Content/images/image_3.jpg")')">
+                              </a>
+                              <div class="text p-4">
+                                   <div class="meta mb-2">
+                                        <div><a href="#">Decembrie 27, 2024</a></div>
+                                        <div><a href="#">Admin</a></div>
+                                        <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                                   </div>
+                                   <h3 class="heading"><a href="#">Aisha s-a ghemuit într-un loc comfortabil și este gata pentru o după-amiază liniștită de visuri.</a></h3>
+                              </div>
+                         </div>
+                    </div>
+          </section>
+
+          <section id="formAdoptie"  class="ftco-appointment ftco-section ftco-no-pt ftco-no-pb img"
+                   style="background-image: url(@Url.Content("~/Content/images/dog.jpg"));" ; background-size: cover; background-position: center;">
+
+               <div class="overlay"></div>
+               <div class="container">
+                    <div class="row d-md-flex justify-content-end">
+                         <div class="col-md-12 col-lg-6 half p-3 py-5 pl-lg-5 ftco-animate">
+                              <h2 class="mb-4">Cerere online pentru adopție</h2>
+
+                              @using (Html.BeginForm("TrimiteCerere", "Adoptie", FormMethod.Post))
+                              {
+                                   @Html.AntiForgeryToken()
+
+                                   <input type="text" name="Animal" class="form-control" value="@Request.QueryString["animal"]" readonly required />
+
+
+                                   <input type="text" name="Nume" placeholder="Nume" class="form-control" required />
+                                   <input type="text" name="Prenume" placeholder="Prenume" class="form-control" required />
+                                   <input type="text" name="Telefon" placeholder="Telefon" class="form-control" required />
+                                   <input type="email" name="Email" placeholder="Email" class="form-control" required />
+                                   <textarea name="Mesaj" placeholder="Mesaj" class="form-control"></textarea>
+
+                                   <button type="submit" class="btn btn-primary py-3 px-4">Trimite cerere</button>
+                              }
+
+                         </div>
+                    </div>
+               </div>
+          </section>

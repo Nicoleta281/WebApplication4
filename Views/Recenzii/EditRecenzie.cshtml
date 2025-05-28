@@ -1,0 +1,20 @@
+﻿@model eUseControl.Domain.Entities.User.Recenzie
+
+@{
+     ViewBag.Title = "Editează Recenzia";
+}
+
+<h2>Editează Recenzia</h2>
+
+@using (Html.BeginForm())
+{
+     @Html.AntiForgeryToken()
+     @Html.HiddenFor(m => m.Id)
+
+     <div class="form-group">
+          @Html.LabelFor(m => m.Text)
+          @Html.TextAreaFor(m => m.Text, new { @class = "form-control", rows = 4 })
+     </div>
+
+     <button type="submit" class="btn btn-primary">Salvează modificările</button>
+}

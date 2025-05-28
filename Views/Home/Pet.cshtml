@@ -1,0 +1,70 @@
+﻿@model IEnumerable<eUseControl.Domain.Entities.Animale.Animal>
+
+@using eUseControl.Domain.Entities.User
+@using eUseControl.Domain.Enums
+
+
+<section class="hero-wrap hero-wrap-2" style="background-image: url(@Url.Content("~/Content/images/bg_2.jpg"));" data-stellar-background-ratio="0.5">
+     <!-- Bannerul tău -->
+</section>
+@{
+     var user = HttpContext.Current.Session["_SessionObject"] as UserMinimal;
+}
+
+@if (user != null && user.Level == URole.Admin)
+{
+     <a href="@Url.Action("Manage", "Animale")" class="btn btn-warning my-3">Gestionează Animale</a>
+}
+
+<div class="container text-center mt-5">
+     <h2><span class="blue-text">Adopția este o promisiune pe viață plină de dragoste și grijă. </span></h2>
+     <p>Deschide-ți inima și oferă unui animal fără adăpost un cămin pentru totdeauna.</p>
+
+     <ul class="nav nav-tabs justify-content-center mt-4" id="petTabs">
+          <li class="nav-item">
+               <a class="nav-link active" data-toggle="tab" href="#dogs">Câini</a>
+          </li>
+          <li class="nav-item">
+               <a class="nav-link" data-toggle="tab" href="#cats">Pisici</a>
+          </li>
+     </ul>
+
+     <div class="tab-content mt-4">
+          <div class="tab-pane fade show active" id="dogs">
+               <div class="row pet-row">
+                    @foreach (var a in Model.Where(x => x.Specie == "Caine"))
+                    {
+                         <div class="col-md-4">
+                              <div class="pet-card">
+                                   <img src="@a.Imagine" alt="@a.Nume" width="300" height="400" onclick="window.location.href='/Home/Index?animal=@a.Nume'">
+                                   <div class="pet-info">
+                                        <h5>@a.Nume</h5>
+                                        <p class="details">@a.Varsta</p>
+                                        <p class="description">@a.Descriere</p>
+                                   </div>
+                              </div>
+                         </div>
+                    }
+               </div>
+          </div>
+
+          <div class="tab-pane fade" id="cats">
+               <div class="row pet-row">
+                    @foreach (var a in Model.Where(x => x.Specie == "Pisica"))
+                    {
+                         <div class="col-md-4">
+                              <div class="pet-card">
+                                   <img src="@a.Imagine" alt="@a.Nume" width="300" height="400" onclick="window.location.href='/Home/Index?animal=@a.Nume#formAdoptie'">
+
+                                   <div class="pet-info">
+                                        <h5>@a.Nume</h5>
+                                        <p class="details">@a.Varsta</p>
+                                        <p class="description">@a.Descriere</p>
+                                   </div>
+                              </div>
+                         </div>
+                    }
+               </div>
+          </div>
+     </div>
+</div>

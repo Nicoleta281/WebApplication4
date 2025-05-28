@@ -1,0 +1,30 @@
+﻿@model eUseControl.Domain.Entities.User.PostareNoua
+@{
+     ViewBag.Title = "Blog - Postare";
+}
+
+
+<section class="ftco-section">
+     <div class="container">
+          <div class="row">
+               <div class="col-md-8">
+                    <div class="blog-entry">
+                         <img src="@Url.Content(Model.Imagine)" class="img-fluid" alt="imagine postare">
+                         <h2 class="mb-3 mt-4">@Model.Titlu</h2>
+                         <p>@Model.Continut</p>
+                    </div>
+               </div>
+
+               <div class="col-md-4 sidebar">
+                    <div class="sidebar-box">
+                         <h3 class="heading">Despre postare</h3>
+                         <p><strong>Data publicării:</strong> @Model.Data.ToString("dd MMMM yyyy")</p>
+                         <p><strong>Autor:</strong> Admin</p>
+                    </div>
+                    <div class="sidebar-box">
+                         <a href="@Url.Action("Blog", "Home")" class="btn btn-primary">Înapoi la blog</a>
+                    </div>
+               </div>
+          </div>
+     </div>
+</section>

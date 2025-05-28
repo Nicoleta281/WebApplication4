@@ -1,0 +1,35 @@
+﻿@model List<eUseControl.Domain.Entities.User.Donatii>
+
+<h2 class="text-center">Istoric Donații</h2>
+
+@if (Model != null && Model.Any())
+{
+     <table class="table table-bordered table-striped">
+          <thead class="thead-dark">
+               <tr>
+                    <th>Nume</th>
+                    <th>Prenume</th>
+                    <th>Email</th>
+                    <th>Suma</th>
+                    <th>Data</th>
+               </tr>
+          </thead>
+          <tbody>
+               @foreach (var d in Model)
+               {
+                    <tr>
+                         <td>@d.Nume</td>
+                         <td>@d.Prenume</td>
+                         <td>@d.Email</td>
+                         <td>@d.Suma</td>
+                         <td>@d.DataDonatiei.ToShortDateString()</td>
+                    </tr>
+               }
+          </tbody>
+     </table>
+}
+else
+{
+     <div class="alert alert-info">Nu ai făcut încă nicio donație.</div>
+}
+

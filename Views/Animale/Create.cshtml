@@ -1,0 +1,22 @@
+﻿@model eUseControl.Domain.Entities.Animale.Animal
+
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+     @Html.LabelFor(m => m.Nume)
+     @Html.TextBoxFor(m => m.Nume, new { @class = "form-control" })
+
+     @Html.LabelFor(m => m.Specie)
+     @Html.TextBoxFor(m => m.Specie, new { @class = "form-control" })
+
+     @Html.LabelFor(m => m.Varsta)
+     @Html.TextBoxFor(m => m.Varsta, new { @class = "form-control" })
+
+     @Html.LabelFor(m => m.Descriere)
+     @Html.TextAreaFor(m => m.Descriere, new { @class = "form-control" })
+
+     <label>Imagine</label>
+     <input type="file" name="poza" class="form-control" />
+
+     <button type="submit" class="btn btn-primary">Salvează</button>
+}

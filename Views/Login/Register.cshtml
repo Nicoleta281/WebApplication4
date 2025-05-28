@@ -1,0 +1,41 @@
+﻿@model eUseControl.Domain.Entities.User.ULoginData
+
+@{
+     ViewBag.Title = "Înregistrare";
+     Layout = "~/Views/Shared/_Layout_Blank.cshtml";
+}
+
+<div class="container d-flex justify-content-center align-items-start" style="min-height: 40vh; padding-top: 30px;">
+
+     <div class="card shadow p-4" style="max-width: 380px; width: 100%;">
+          <h4 class="text-center mb-4 font-weight-bold">Înregistrare</h4>
+
+          @using (Html.BeginForm("Register", "Login", FormMethod.Post))
+          {
+               @Html.AntiForgeryToken()
+
+               <div class="form-group mb-3">
+                    @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", placeholder = "Prenume" })
+               </div>
+
+               <div class="form-group mb-3">
+                    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", placeholder = "Nume" })
+               </div>
+
+               <div class="form-group mb-3">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email" })
+               </div>
+
+               <div class="form-group mb-4">
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Parolă" })
+               </div>
+
+               <button type="submit" class="btn btn-dark btn-block">ÎNREGISTREAZĂ-TE</button>
+
+               <div class="text-center mt-3">
+                    <small>Ai deja cont?</small>
+                    <a href="@Url.Action("Index", "Login")" class="text-primary">Loghează-te</a>
+               </div>
+          }
+     </div>
+</div>

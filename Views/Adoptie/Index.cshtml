@@ -1,0 +1,35 @@
+﻿@model List<eUseControl.Domain.Entities.User.AdoptieRequest>
+
+<h2>Cereri de adopție</h2>
+<table class="table">
+     <thead>
+          <tr>
+               <th>Animal</th>
+               <th>Nume</th>
+               <th>Email</th>
+               <th>Mesaj</th>
+               <th>Status</th>
+               <th>Acțiuni</th>
+          </tr>
+     </thead>
+     <tbody>
+          @foreach (var c in Model)
+          {
+               <tr>
+                    <td>@c.Animal</td>
+                    <td>@c.Nume @c.Prenume</td>
+                    <td>@c.Email</td>
+                    <td>@c.Mesaj</td>
+                    <td>@c.Status</td>
+                    <td>
+                         @using (Html.BeginForm("ActualizeazaStatus", "Adoptie", FormMethod.Post))
+                         {
+                              @Html.Hidden("id", c.Id)
+                              <button name="status" value="Acceptat" class="btn btn-success btn-sm">Acceptă</button>
+                              <button name="status" value="Respins" class="btn btn-danger btn-sm">Respinge</button>
+                         }
+                    </td>
+               </tr>
+          }
+     </tbody>
+</table>

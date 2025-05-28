@@ -1,0 +1,50 @@
+﻿@model eUseControl.Domain.Entities.User.UDTable
+
+@{
+     ViewBag.Title = "Profil utilizator";
+     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Profilul meu</h2>
+
+<div class="card" style="width: 350px; padding: 20px;">
+     <p><strong>Prenume:</strong> @Model.FirstName</p>
+     <p><strong>Nume:</strong> @Model.LastName</p>
+     <p><strong>Email:</strong> @Model.Email</p>
+     <p><strong>Username:</strong> @Model.Username</p>
+
+     <p>
+          <strong>Rol:</strong>
+          @{
+               switch (Model.Level)
+               {
+                    case eUseControl.Domain.Enums.URole.Admin:
+                         @:Administrator
+                         break;
+                    case eUseControl.Domain.Enums.URole.Donator:
+                         @:Donator
+                         break;
+                    default:
+                         @:Utilizator
+                         break;
+               }
+          }
+     </p>
+
+     <hr />
+
+     @if (Model.Level == eUseControl.Domain.Enums.URole.Admin)
+     {
+          <p style="color:blue;">Ai acces la panoul de administrare.</p>
+          <a href="/Home/Index" class="btn btn-info">Accesează Panou Admin</a>
+     }
+     else if (Model.Level == eUseControl.Domain.Enums.URole.Donator)
+     {
+          <p style="color:green;">Mulțumim pentru contribuțiile tale!</p>
+          <a href="/Donatii/Istoric" class="btn btn-success">Istoric Donații</a>
+     }
+     else
+     {
+          <p style="color:gray;">Ești logat ca utilizator simplu.</p>
+     }
+</div>

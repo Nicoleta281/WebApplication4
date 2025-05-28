@@ -1,0 +1,32 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <title>@ViewBag.Title - LăbuțeFericite</title>
+
+     <!-- Google Fonts & FontAwesome -->
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet" />
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+     <!-- CSS bundle -->
+     @Styles.Render("~/Content/css")
+
+     @RenderSection("Styles", required: false)
+</head>
+<body>
+
+     @Html.Partial("_Head")
+     @Html.Partial("_Navigation")
+
+     @RenderBody()
+
+     @Html.Partial("_Footer")
+
+     <!-- JS bundle -->
+     @Scripts.Render("~/bundles/js")
+
+     @RenderSection("Scripts", required: false)
+</body>
+</html>

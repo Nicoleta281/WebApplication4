@@ -1,0 +1,19 @@
+﻿@model eUseControl.Domain.Entities.User.PostareNoua
+
+
+@using (Html.BeginForm("Adauga", "Noutate", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+     @Html.AntiForgeryToken()
+
+     <label>Titlu</label>
+     @Html.TextBoxFor(m => m.Titlu, new { @class = "form-control" })
+
+     <label>Conținut</label>
+     @Html.TextAreaFor(m => m.Continut, new { @class = "form-control" })
+
+     <label>Imagine</label>
+     <input type="file" name="img" class="form-control" />
+
+     <br />
+     <button type="submit" class="btn btn-primary">Adaugă Postare</button>
+}

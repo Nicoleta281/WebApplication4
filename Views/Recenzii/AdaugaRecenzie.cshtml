@@ -1,0 +1,28 @@
+﻿@model eUseControl.Domain.Entities.User.Recenzie
+
+@{
+     ViewBag.Title = "Adaugă Recenzie";
+}
+
+<h2>Adaugă Recenzie</h2>
+
+@using (Html.BeginForm("AdaugaRecenzie", "Recenzii", FormMethod.Post))
+{
+     @Html.AntiForgeryToken()
+
+     <div>
+          @Html.LabelFor(m => m.Autor)
+          @Html.TextBoxFor(m => m.Autor, new { @class = "form-control" })
+     </div>
+
+     <div>
+          @Html.LabelFor(m => m.Text)
+          @Html.TextAreaFor(m => m.Text, new { @class = "form-control" })
+     </div>
+     <button type="submit" class="btn btn-success">Trimite recenzia</button>
+}
+
+@if (TempData["Success"] != null)
+{
+     <div class="alert alert-success">@TempData["Success"]</div>
+}

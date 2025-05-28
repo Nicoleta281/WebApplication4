@@ -1,0 +1,25 @@
+﻿@model eUseControl.Domain.Entities.User.Donatii
+
+
+@using (Html.BeginForm("Formular", "Donatii", FormMethod.Post))
+{
+     @Html.AntiForgeryToken()
+
+     <label>Nume</label>
+     @Html.TextBoxFor(m => m.Nume, new { @class = "form-control" })
+
+     <label>Prenume</label>
+     @Html.TextBoxFor(m => m.Prenume, new { @class = "form-control" })
+
+     <label>Email</label>
+     @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+
+     <label>Număr Card</label>
+     <input type="text" name="numarCard" class="form-control" required />
+
+     <label>Suma</label>
+     @Html.TextBoxFor(m => m.Suma, new { @class = "form-control", type = "number", step = "0.01" })
+
+     <br />
+     <button type="submit" class="btn btn-primary">Donează</button>
+}

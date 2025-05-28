@@ -1,0 +1,68 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <title>@ViewBag.Title - LăbuțeFericite</title>
+
+     <!-- Fonturi Google + FontAwesome -->
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet" />
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+     <!-- CSS principal -->
+     @Styles.Render("~/Content/css")
+
+     <style>
+          body {
+               background-color: #f8f9fa;
+               font-family: 'Montserrat', sans-serif;
+          }
+
+          .auth-wrapper {
+               min-height: 100vh;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               padding: 2rem;
+          }
+
+          .auth-box {
+               background: #fff;
+               padding: 2.5rem;
+               border-radius: 15px;
+               box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
+               width: 100%;
+               max-width: 450px;
+          }
+
+               .auth-box h2 {
+                    margin-bottom: 1.5rem;
+                    font-weight: 700;
+                    text-align: center;
+               }
+
+          .btn-custom {
+               background-color: #FFC107;
+               border: none;
+               color: #000;
+               font-weight: bold;
+               width: 100%;
+               border-radius: 30px;
+               padding: 0.6rem 1.2rem;
+          }
+     </style>
+
+     @RenderSection("Styles", required: false)
+</head>
+<body>
+     <div class="auth-wrapper">
+          <div class="auth-box">
+               @RenderBody()
+          </div>
+     </div>
+
+     @Scripts.Render("~/bundles/js")
+     @RenderSection("Scripts", required: false)
+</body>
+</html>

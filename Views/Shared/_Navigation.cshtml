@@ -1,0 +1,86 @@
+﻿@{
+     var user = Session["_SessionObject"] as eUseControl.Domain.Entities.User.UserMinimal;
+     var role = Session["UserRole"]?.ToString();
+}
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+     <div class="container">
+          <a class="navbar-brand" href="@Url.Action("Index", "Home")">LăbuțeFericite</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                  aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="fa fa-bars"></span> Menu
+          </button>
+
+          <div class="collapse navbar-collapse" id="ftco-nav">
+               <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">@Html.ActionLink("Acasă", "Index", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Noi", "About", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Animalele", "Pet", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Echipa", "Team", "Home", null, new { @class = "nav-link" })</li>
+
+                    @if (role != "Donator")
+                    {
+                         <li class="nav-item">@Html.ActionLink("Galerie", "Gallery", "Home", null, new { @class = "nav-link" })</li>
+                         <li class="nav-item">@Html.ActionLink("Sfaturi", "Tips", "Home", null, new { @class = "nav-link" })</li>
+                    }
+
+                    @* Blog: submeniu dacă Admin, simplu altfel *@
+                    @if (role == "Admin")
+                    {
+                         <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   Blog
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="blogDropdown">
+                                   <a class="dropdown-item" href="@Url.Action("Blog", "Home")">Toate postările</a>
+                                   <a class="dropdown-item" href="@Url.Action("Adauga", "Noutate")">Adaugă postare</a>
+                              </div>
+                         </li>
+                    }
+                    else
+                    {
+                         <li class="nav-item">@Html.ActionLink("Blog", "Blog", "Home", null, new { @class = "nav-link" })</li>
+                    }
+
+                    @if (role != "Admin")
+                    {
+                         <li class="nav-item">@Html.ActionLink("Contacte", "Contact", "Home", null, new { @class = "nav-link" })</li>
+                    }
+
+                    @if (role == "Admin")
+                    {
+                         <li class="nav-item">@Html.ActionLink("Fișe de adopție", "Index", "Adoptie", null, new { @class = "nav-link" })</li>
+                         <li class="nav-item">@Html.ActionLink("Donații", "Lista", "Donatii", null, new { @class = "nav-link" })</li>
+                    }
+
+                    @if (role == "Donator")
+                    {
+                         <li class="nav-item">@Html.ActionLink("Cazuri", "Cazuri", "Home", null, new { @class = "nav-link" })</li>
+                         <li class="nav-item">@Html.ActionLink("Donează", "Formular", "Donatii", null, new { @class = "nav-link" })</li>
+                         <li class="nav-item">@Html.ActionLink("Istoric Donații", "Istoric", "Donatii", null, new { @class = "nav-link" })</li>
+                    }
+
+                    @if (role == "User")
+                    {
+                         <li class="nav-item">@Html.ActionLink("Cererile Mele", "CererileMele", "Adoptie", null, new { @class = "nav-link" })</li>
+                    }
+
+                    @if (user != null)
+                    {
+                         <li class="nav-item">@Html.ActionLink("Profil", "Profil", "Admin", null, new { @class = "nav-link" })</li>
+                    }
+
+                    @if (Session["Login"] == null)
+                    {
+                         <li class="nav-item">@Html.ActionLink("Login", "Index", "Login", null, new { @class = "nav-link", style = "color: #000; font-weight: bold;" })</li>
+                         <li class="nav-item">@Html.ActionLink("Register", "Register", "Login", null, new { @class = "nav-link" })</li>
+                    }
+                    else
+                    {
+                         <li class="nav-item">@Html.ActionLink("Ieșire", "Logout", "Login", null, new { @class = "nav-link", style = "color: #000; font-weight: bold;" })</li>
+                    }
+               </ul>
+          </div>
+     </div>
+</nav>

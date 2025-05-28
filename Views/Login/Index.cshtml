@@ -1,0 +1,76 @@
+﻿@model eUseControl.Domain.Entities.User.ULoginData
+
+@{
+     Layout = "~/Views/Shared/_Layout_Blank.cshtml";
+     ViewBag.Title = "Login";
+}
+
+<div class="panel panel-filled">
+     <div class="panel-body">
+          @Html.ValidationSummary(true)
+
+          @using (Html.BeginForm("Index", "Login", FormMethod.Post, new { id = "LoginForm" }))
+          {
+               @Html.AntiForgeryToken()
+
+               <div class="form-group">
+                    @Html.LabelFor(m => m.Credential)
+                    @Html.TextBoxFor(m => m.Credential, new
+                    {
+                        @class = "form-control",
+                        placeholder = "example@gmail.com",
+                        title = "Please enter your username",
+                        id = "username"
+                    })
+                    <span class="help-block small">Your unique username to app</span>
+               </div>
+
+               <div class="form-group">
+                    @Html.LabelFor(m => m.Password)
+                    @Html.PasswordFor(m => m.Password, new
+                    {
+                        @class = "form-control",
+                        placeholder = "********",
+                        title = "Please enter your password",
+                        id = "password"
+                    })
+                    <span class="help-block small">Your strong password</span>
+               </div>
+
+               <div class="text-right mb-3">
+                    <a href="@Url.Action("ForgotPassword", "Login")" style="font-size: 0.9rem; color: #6c757d;">
+                         Ai uitat parola?
+                    </a>
+               </div>
+
+               <div>
+                    <button class="btn btn-accent">Login</button>
+               </div>
+
+
+
+          }
+
+          <div class="text-center" style="margin-top: 20px;">
+               <span>Nu ai cont?</span>
+               <a href="@Url.Action("Register", "Login")" class="btn btn-link">Înregistrează-te</a>
+          </div>
+     </div>
+</div>
+
+@section Scripts {
+   
+     <script>
+          $(function () {
+               $("#LoginForm").validate({
+                    rules: {
+                         Credential: { required: true },
+                         Password: { required: true }
+                    },
+                    submitHandler: function (form) {
+                         form.submit();
+                    }
+               });
+          });
+     </script>
+}
