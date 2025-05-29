@@ -74,7 +74,9 @@ namespace WebApplication4.Controllers
           }
 
           // ✅ Utilizatorii își văd propriile cereri
-          [AccessRoles(URole.User)]
+          [AccessRoles(new URole[] { URole.User, URole.Donator })]
+
+
           public ActionResult CererileMele()
           {
                var user = (UserMinimal)Session["_SessionObject"];

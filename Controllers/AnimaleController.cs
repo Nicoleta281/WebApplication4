@@ -33,7 +33,7 @@ public class AnimaleController : Controller
      [AccessRoles(URole.Admin)]
      public ActionResult Create(Animal a, HttpPostedFileBase poza)
      {
-          if (poza != null)
+          if (poza != null && poza.ContentLength > 0)
           {
                var path = Server.MapPath("~/Content/images/" + poza.FileName);
                poza.SaveAs(path);
