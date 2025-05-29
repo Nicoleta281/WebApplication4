@@ -255,7 +255,6 @@
     <Compile Include="Controllers\LoginCotroller.cs" />
     <Compile Include="Controllers\NoutateController.cs" />
     <Compile Include="Controllers\RecenziiController.cs" />
-    <Compile Include="Controllers\TipsController.cs" />
     <Compile Include="Extensions\HttpContextExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

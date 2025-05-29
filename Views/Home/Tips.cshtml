@@ -1,37 +1,79 @@
-﻿@model List<eUseControl.Domain.Entities.User.TipSfat>
+﻿﻿
 @{
-     ViewBag.Title = "Sfaturi";
-     Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Tips";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<section class="hero-wrap hero-wrap-2" style="background-image: url('@Url.Content("~/Content/images/bg_1.jpg")');">
-     <div class="container">
-          <h1 class="mb-2 bread">Sfaturi</h1>
-     </div>
+<section class="hero-wrap hero-wrap-2" style="background-image: url('@Url.Content("~/Content/images/bg_2.jpg")');"
+         data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-end">
+            <div class="col-md-9 ftco-animate pb-5">
+                <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Acasă <i class="ion-ios-arrow-forward"></i></a></span> <span>Sfaturi <i class="ion-ios-arrow-forward"></i></span></p>
+                <h1 class="mb-0 bread">Sfaturi</h1>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section class="ftco-section">
-     <div class="container">
-          @if (User.IsInRole("Admin"))
-          {
-               <a href="@Url.Action("Create", "Tips")" class="btn btn-success mb-3">Adaugă sfat</a>
-          }
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center pb-5 mb-3">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h2>Pritenie fără bariere</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 ftco-animate">
+                <div class="block-7">
+                    <div class="img"   <section class="hero-wrap hero-wrap-2" style="background-image: url('@Url.Content("~/Content/images/pricing-1.jpg")');"></div>
+                    <div class="text-center p-4">
+                        <span class="excerpt d-block">Sfaturi de îngrijire a animalelor:</span>
 
-          @foreach (var sfat in Model)
-          {
-               <div class="card mb-3">
-                    <div class="card-body">
-                         <p>@sfat.Continut</p>
-                         <small class="text-muted">Adăugat de @sfat.Autor la @sfat.DataAdaugarii.ToShortDateString()</small>
-                         @if (User.IsInRole("Admin"))
-                         {
-                              <div class="mt-2">
-                                   <a href="@Url.Action("Edit", "Tips", new { id = sfat.Id })" class="btn btn-sm btn-primary">Editează</a>
-                                   <a href="@Url.Action("Delete", "Tips", new { id = sfat.Id })" class="btn btn-sm btn-danger">Șterge</a>
-                              </div>
-                         }
+
+                        <ul class="pricing-text mb-5">
+                            <li><span class="fa fa-check mr-2"></span>O hrană adecvată vârstei și tipului de animal este esențială pentru sănătatea acestuia. Consultă un veterinar pentru recomandări și respectă dozajele corespunzătoare pentru a evita obezitatea și problemele de sănătate.</li>
+                            <li><span class="fa fa-check mr-2"></span>Exercițiile regulate, cum ar fi plimbările zilnice pentru câini și jocurile interactive pentru pisici, sunt importante pentru menținerea sănătății fizice și mentale a animalului tău.</li>
+                            <li><span class="fa fa-check mr-2"></span>Chiar dacă animalul tău pare sănătos, este important să faci controale periodice pentru a preveni apariția unor afecțiuni și pentru a te asigura că primește toate vaccinurile și tratamentele necesare.</li>
+
+                        </ul>
+
                     </div>
-               </div>
-          }
-     </div>
+                </div>
+            </div>
+            <div class="col-md-4 ftco-animate">
+                <div class="block-7">
+                    <div class="img"   <section class="hero-wrap hero-wrap-2" style="background-image: url('@Url.Content("~/Content/images/pricing-2.jpg")');"></div>
+                    <div class="text-center p-4">
+                        <span class="excerpt d-block">Sfaturi pentru acomodarea animalului la un nou mediu:</span>
+
+
+                        <ul class="pricing-text mb-5">
+                            <li><span class="fa fa-check mr-2"></span>Asigură-te că animalul are un loc liniștit și confortabil unde să se retragă și să se simtă în siguranță. Poate fi un pat, o cușcă sau un colț din casă, unde nu va fi deranjat de zgomote sau de alte animale.</li>
+                            <li><span class="fa fa-check mr-2"></span>Nu forța animalul să se adapteze prea repede. Permite-i să exploreze noul mediu în ritmul lui, oferindu-i timp să se familiarizeze cu noile mirosuri, sunete și obiecte.</li>
+                            <li><span class="fa fa-check mr-2"></span>Păstrează rutina de hrană, plimbări și jocuri cât mai consistentă posibil. Acest lucru îi va oferi un sentiment de siguranță și va contribui la reducerea stresului în perioada de adaptare.</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ftco-animate">
+                <div class="block-7">
+                    <div class="img"  <section class="hero-wrap hero-wrap-2" style="background-image: url('@Url.Content("~/Content/images/pricing-3.jpg")');"></div>
+                    <div class="text-center p-4">
+                        <span class="excerpt d-block">Sfaturi suplimentare:</span>
+
+
+                        <ul class="pricing-text mb-5">
+                            <li><span class="fa fa-check mr-2"></span>Este important ca animalul să fie expus treptat la alte animale sau oameni pentru a învăța cum să interacționeze corect cu aceștia. Începe cu întâlniri scurte și supraveghează comportamentul lor, recompensând comportamentele pozitive.</li>
+                            <li><span class="fa fa-check mr-2"></span>Baie regulată, perierea blănii și igiena dentară sunt esențiale pentru sănătatea animalului. În funcție de specie, asigură-te că igiena animalului este menținută la un nivel optim pentru a preveni apariția infecțiilor.</li>
+                            <li><span class="fa fa-check mr-2"></span>Educația animalului este esențială pentru a-i stabili reguli clare. Fii consecvent în disciplină și recompensează comportamentele dorite, ajutându-l să înțeleagă ce este permis și ce nu.</li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
