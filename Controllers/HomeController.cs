@@ -56,9 +56,10 @@ namespace WebApplication4.Controllers
                }
           }
           public ActionResult Tips()
-        {
-            return View();
-        }
+          {
+               return RedirectToAction("Index", "Tips");
+          }
+
 
 
           private UDTable profile;
